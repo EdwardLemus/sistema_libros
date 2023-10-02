@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/libros', function(){
+    return view ('nuevo_libro');
+});
+Route::post('/libros', 'LibrosController@store');
+
+Route::get('/books', 'LibrosController@index');
+
